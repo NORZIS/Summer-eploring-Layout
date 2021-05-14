@@ -112,6 +112,8 @@
 display: flex;
 align-items: center;
 flex-direction: column;
+background: bottom left no-repeat url(/Progects/first/img/shadow.png);
+padding-bottom: 10rem;
 }
 
 .section3 .let {
@@ -128,8 +130,45 @@ flex-direction: column;
   color: #a19b96;
 }
 
+.section3 .lorem {
+  list-style: none;
+  display: flex;
+  padding: 0 8.5%;
+}
+
+.section3 .lorem .section3-block {
+  margin: 0 2.75rem;
+
+}
+
+.section3 .lorem .img {
+  height: 400px;
+  width: 100%;
+ }
+
+.section3 .lorem .lorem2 {
+  display: flex;
+  font-size: 2rem;
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #7f7770;
+  margin: 0;
+  height: 5.4rem;
+  align-items: center;
+  padding-left: 1rem;
+}
+
+.section3 .lorem .under-lorem{
+  display: flex;
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  background-color: #7f7770;
+  margin: 0;
+  height: 5.4rem;
+  padding-left: 1rem;
+}
+
 .section3 .show-button {
-  margin-left: 4rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -137,17 +176,36 @@ flex-direction: column;
   background-color: #7f7770;
   border: 0px solid #000;
   border-radius: 1.5rem;
-  width: 10rem;
-  height: 2rem;
+  width: 20rem;
+  height: 4rem;
   font-weight: bolder;
   text-transform: uppercase;
   color: #ffffff;
   text-decoration: none;
+  letter-spacing: 0.15rem;
 }
 
-
-.section3 .lorem {
-  list-style: none;
+.section4 {
   display: flex;
-  align-content: space-between;
+}
+
+.section4 .section4-text{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  background: #7f7770;
+}
+
+.section4 .section4-text .section4-text-header {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 4rem;
+}
+
+.section4 .section4-text .section4-lorem {
+  color: #ffffff;
+  font-size: 2rem;
+  margin-left: 6.5rem;
+  margin-top: 0;
 }
