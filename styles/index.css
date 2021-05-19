@@ -72,8 +72,8 @@ body {
 .section2 {
   height: 61rem;
   padding-top: 15rem;  
-  background: no-repeat url(/Progects/first/img/background-second.png);
-  background-size: 100%;
+  background: url(/progects/first/img/bott.png) center bottom no-repeat,  url(/progects/first/img/top.png) center top no-repeat, no-repeat url(/Progects/first/img/background-second.png);
+  background-size: 100% 10%, 100% 10%, 100%;
 }
 
 .section2 .section2-header {
@@ -312,8 +312,8 @@ padding-bottom: 10rem;
   height: 60.5rem;
   align-items: center;
   justify-content: center;
-  background: center left no-repeat url(/Progects/first/img/shadow.png), #99928d;
-  
+  background: center left no-repeat url(/Progects/first/img/shadow.png), url(/progects/first/img/bott.png) center bottom no-repeat, url(/progects/first/img/top.png) center top no-repeat, #99928d;
+  background-size: auto, 100% 25%, 100% 25%;
 }
 
 .section6 .section6-header {
@@ -332,7 +332,7 @@ color: #ffffff;
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
-  background: no-repeat url(/Progects/first/img/hike.png);
+  background: center bottom no-repeat url(/progects/first/img/bott.png), center top no-repeat url(/progects/first/img/top.png), no-repeat url(/Progects/first/img/hike.png);
   background-size: 100%;
   height: 91.5rem;
 }
@@ -412,7 +412,9 @@ color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #deb37e;
+  padding-top: 10rem;
+  background: center bottom no-repeat url(/progects/first/img/bott.png), center top no-repeat url(/progects/first/img/top.png), #deb37e;
+  background-size: 100% 25%;
 }
 
 .section9 .title {
@@ -431,6 +433,7 @@ color: #ffffff;
 .section9 .email {
   display: flex;
   align-items: center;
+  margin-bottom: 5rem;
 }
 
 .section9 .email-form {
@@ -453,7 +456,7 @@ color: #ffffff;
   position: absolute;
   height: 5rem;
   width: 17.5rem;
-  background-color: #54524f;
+  background: #54524f;
   border: 0;
   border-radius: 5rem;
   top: 0;
@@ -461,4 +464,38 @@ color: #ffffff;
   font-size: 2rem;
   font-weight: bold;
   color: #ffffff;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  background: center top no-repeat url(/progects/first/img/top.png), #7f7770;
+  background-size: 100% 25%;
+  justify-content: space-around;
+  padding-top: 20.63rem;
+}
+
+.footer .column1 {
+  width: 38.56rem;
+}
+
+.footer .head {
+  color: #ffffff;
+  font-size: 2rem;
+}
+
+.footer .foot1 {
+  width: 29.25rem;
+  color: #ffffff;
+  font-size: 1.25rem;
+}
+
+.footer .social {
+  background: inherit;
+  border: none;
+}
+
+.footer .foot {
+  color: #ffffff;
+  font-size: 1.25;
 }
