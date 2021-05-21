@@ -2,6 +2,8 @@
   box-sizing: border-box;
 }
 
+
+
 body {
   font-family: "open sans", "Times new roman";
 }
@@ -11,9 +13,11 @@ body {
   height: 8.125rem;
   justify-content: space-between;
   align-items: center;
-  margin: 0 5rem;
+  padding: 0 5rem;
   
 }
+
+
 
 .header .menu {
   display: flex;
@@ -69,11 +73,55 @@ body {
   right: 0.7rem;
 }
 
+@media screen and (max-width: 800px) {
+  .header, .header .menu, .header .menu menu{flex-direction: column; height: 100%; padding: 0}
+  .header{height: 25rem; padding-top: 1rem;}
+  .header .menu menu {height: 10rem;}
+}
+
 .section2 {
+  position: relative;
   height: 61rem;
   padding-top: 15rem;  
-  background: url(/progects/first/img/bott.png) center bottom no-repeat,  url(/progects/first/img/top.png) center top no-repeat, no-repeat url(/Progects/first/img/background-second.png);
-  background-size: 100% 10%, 100% 10%, 100%;
+  /* background: url(/progects/first/img/bott.png) center bottom no-repeat,  url(/progects/first/img/top.png) center top no-repeat, no-repeat url(../img/background-second.png); */
+}
+
+.section2 .background,
+.section2 .background-top,
+.section2 .background-bottom {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  margin: 0;
+  padding: 0; 
+}
+
+.section2 .background-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.section2 .background-top,
+.section2 .background-bottom {
+  z-index: unset;
+  background-size: 100% 100%;
+  background-position: center top;
+  background-repeat: no-repeat;
+  height: 10vw;
+}
+
+.section2 .background-top {
+  background-image: url(../img/top.png);
+  bottom: unset;
+}
+
+.section2 .background-bottom {
+  background-image: url(../img/bott.png);
+  top: unset;
 }
 
 .section2 .section2-header {
@@ -118,6 +166,12 @@ body {
   font-style: italic;
   font-size: 1.4rem;
   width: 25rem;
+}
+
+@media screen and (max-width:550px) {
+ .section2 {height: 50rem; padding-top: 7rem;}
+ .section2 .section2-header{font-size: 3rem;}
+ .section2 .descr {font-size: 1.1rem; -webkit-text-stroke: 0.3px #ffffff;}  
 }
 .section3 {
 display: flex;
@@ -196,6 +250,22 @@ padding-bottom: 10rem;
   color: #ffffff;
   text-decoration: none;
   letter-spacing: 0.15rem;
+}
+
+@media screen and (max-width: 1258px) {
+  .section3 .lorem {flex-direction: column;
+                    align-items: center;}
+  .section3 .lorem .section3-block {width: 50%;
+}
+}
+
+@media screen and (max-width: 800px) {
+ .section3 .let {font-size: 2rem;}
+ .section3 .under-let {font-size: 1.5rem;
+                       width: 30rem}
+ .section3 .section3-block { height: 30rem;}
+ .section3 .lorem .img {object-fit:contain;
+                        height: min-content;}  
 }
 
 .section4 {

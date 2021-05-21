@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/normalize.css" />
@@ -9,10 +10,11 @@
     <title>My first page</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header section">
       <div id="logo" class="logo">
         <img src="./img/logo.png" alt="LOGO" />
       </div>
+      
       <div id="menu" class="menu">
         <menu>
           <li class="menu-item"><a href="#" class="qwe">Home</a></li>
@@ -28,13 +30,18 @@
         </div>
       </div>
     </header>
-    <section class="section2">
+    <section class="section2 section">
+      <div class="background">
+        <img src="./img/background-second.png" alt="" class="background-img">  
+        <div class="background-top"></div>
+        <div class="background-bottom"></div>
+      </div>
       <p class="section2-header">it's time for hiking</p>
       <p class="under-header">Loremipsum dolor</p>
       <a class="button read-button" href="#">Read more</a>
       <p class="descr">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim quisquam cupiditate nulla ea velit laboriosam eius sed.</p>
     </section>
-    <section class="section3">
+    <section class="section3 section">
       <p class="let">let's go</p>
       <p class="under-let">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vivamus lacinia odio vitae vestibulum vestibulum</p>
       <ul class="lorem">
