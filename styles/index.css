@@ -6,6 +6,12 @@
 
 body {
   font-family: "open sans", "Times new roman";
+  overflow-x: hidden;
+}
+
+
+section {
+  position: relative;
 }
 
 .header {
@@ -16,8 +22,6 @@ body {
   padding: 0 5rem;
   
 }
-
-
 
 .header .menu {
   display: flex;
@@ -80,15 +84,14 @@ body {
 }
 
 .section2 {
-  position: relative;
   height: 61rem;
   padding-top: 15rem;  
   /* background: url(/progects/first/img/bott.png) center bottom no-repeat,  url(/progects/first/img/top.png) center top no-repeat, no-repeat url(../img/background-second.png); */
 }
 
-.section2 .background,
-.section2 .background-top,
-.section2 .background-bottom {
+.background,
+.background-top,
+.background-bottom {
   position: absolute;
   top: 0;
   right: 0;
@@ -99,14 +102,14 @@ body {
   padding: 0; 
 }
 
-.section2 .background-img {
+.background-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.section2 .background-top,
-.section2 .background-bottom {
+.background-top,
+.background-bottom {
   z-index: unset;
   background-size: 100% 100%;
   background-position: center top;
@@ -114,12 +117,12 @@ body {
   height: 10vw;
 }
 
-.section2 .background-top {
+.background-top {
   background-image: url(../img/top.png);
   bottom: unset;
 }
 
-.section2 .background-bottom {
+.background-bottom {
   background-image: url(../img/bott.png);
   top: unset;
 }
@@ -170,8 +173,10 @@ body {
 
 @media screen and (max-width:550px) {
  .section2 {height: 50rem; padding-top: 7rem;}
- .section2 .section2-header{font-size: 3rem;}
- .section2 .descr {font-size: 1.1rem; -webkit-text-stroke: 0.3px #ffffff;}  
+ .section2 .section2-header{font-size: 2.5rem;
+width: 15rem}
+ .section2 .descr {font-size: 1.1rem; -webkit-text-stroke: 0.3px #ffffff;
+width: 15rem}  
 }
 .section3 {
 display: flex;
@@ -203,6 +208,10 @@ padding-bottom: 10rem;
 }
 
 .section3 .lorem .section3-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   margin: 0 2.75rem;
 
 }
@@ -210,6 +219,7 @@ padding-bottom: 10rem;
 .section3 .lorem .img {
   height: 400px;
   width: 100%;
+  margin-bottom: 0;
  }
 
 .section3 .lorem .lorem2 {
@@ -222,6 +232,7 @@ padding-bottom: 10rem;
   height: 5.4rem;
   align-items: center;
   padding-left: 1rem;
+  width: 100%;
 }
 
 .section3 .lorem .under-lorem{
@@ -255,17 +266,24 @@ padding-bottom: 10rem;
 @media screen and (max-width: 1258px) {
   .section3 .lorem {flex-direction: column;
                     align-items: center;}
-  .section3 .lorem .section3-block {width: 50%;
+  .section3 .lorem .section3-block {width: 80%;
+    max-width: 388px;
+    margin-bottom: 5rem;
 }
 }
 
 @media screen and (max-width: 800px) {
- .section3 .let {font-size: 2rem;}
- .section3 .under-let {font-size: 1.5rem;
-                       width: 30rem}
- .section3 .section3-block { height: 30rem;}
- .section3 .lorem .img {object-fit:contain;
-                        height: min-content;}  
+ .section3 .let {font-size: 1.5rem;}
+ .section3 .under-let {font-size: 1rem;
+                       width: 15rem}
+ .section3 .section3-block { height: auto;
+align-items: flex-start;}
+ .section3 .lorem .img {max-width: 100%;
+  height: auto;
+}
+ .section3 .lorem .lorem2 {font-size: 1.5rem;}
+ .section3 .lorem .under-lorem {font-size: 1rem;}
+ .section3 .show-button {width: 20rem}
 }
 
 .section4 {
@@ -273,14 +291,10 @@ padding-bottom: 10rem;
 }
 
 .section4 .section4-img {
-  width: 128.738rem;
+  width: 50%;
   display: flex;
   height: 69.65rem;
-}
-
-.section4 .section4-img .section4img {
-  width: 100%;
-  height: 100%;
+ object-fit: contain;
 }
 
 .section4 .section4-text{
@@ -290,6 +304,7 @@ padding-bottom: 10rem;
   justify-content: center;
   padding-left: 5rem;
   background: #7f7770;
+  width: 50%
 }
 
 .section4 .section4-text .section4-text-header {
@@ -324,9 +339,23 @@ padding-bottom: 10rem;
   font-size: 2rem;
 }
 
+@media screen and (max-width: 800px) {
+  .section4{flex-direction: column;}
+.section4 .section4-img {width: 100%;
+height: auto;
+object-fit:cover;}
+.section4 .section4-img .section4img {width: 100%;
+height: auto;}
+.section4 .section4-text {width: 100%;
+  padding-bottom: 1rem;}
+.section4 .section4-text .section4-text-header {font-size: 3rem;}
+.section4 .section4-text .section4-lorem {font-size: 1.5rem;
+width: 80%}
+}
+.section4 .section4-text .read-button1 {width: 80%}
+
 .section5{
   display: flex;
-  justify-content: center;
 }
 
 .section5 .section5-text{
@@ -336,6 +365,7 @@ padding-bottom: 10rem;
   justify-content: center;
   padding-right: 5rem;
   background: #deb37e;
+  width: 50%;
 }
 
 .section5 .section5-text .section5-text-header {
@@ -372,9 +402,25 @@ padding-bottom: 10rem;
 }
 
 .section5 .section5-img .section5img {
-  width: 58.95rem;
+  width: 130.80%;
   height: 100%;
 }
+
+@media screen and (max-width: 800px) {
+  .section5{flex-direction: column;}
+.section5 .section5-img {width: 100%;
+height: auto;
+object-fit:cover;}
+.section5 .section5-img .section5img {width: 100%;
+height: auto;}
+.section5 .section5-text {width: 100%;
+  padding-bottom: 1rem;}
+.section5 .section5-text .section5-text-header {font-size: 3rem;
+width: 80%}
+.section5 .section5-text .section5-lorem {font-size: 1.5rem;
+width: 80%}
+}
+.section5 .section5-text .read-button2 {width: 80%}
 
 .section6 {
   display: flex;
@@ -397,34 +443,50 @@ color: #ffffff;
   color: #ffffff
 }
 
+@media screen and (max-width: 800px) {
+  .section6 .section6-header {font-size: 2.5rem;
+  width: 80%}
+  .section6 .section6-under {font-size: 1.5rem;
+  width: 80%}
+  .section6 {background-size: auto, 100% 10%, 100% 10%;
+  height: 45rem;}
+}
+
 .section7 {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
-  background: center bottom no-repeat url(/progects/first/img/bott.png), center top no-repeat url(/progects/first/img/top.png), no-repeat url(/Progects/first/img/hike.png);
   background-size: 100%;
   height: 91.5rem;
 }
 
 .section7 .explore {
+  position: absolute;
   color: #deb37e;
-  margin-bottom: 0;
   font-size: 7.5rem;
   font-style: italic;
   padding-right: 5rem;
   text-transform: uppercase;
   text-shadow: 0.1rem -0.1rem 0.5rem #000;
+  margin-top: 0;
 }
 
 .section7 .world {
+  position: absolute;
   color: #54524f;
-  margin-top: 0;
   font-size: 7.5rem;
   padding-right: 5rem;
   text-transform: uppercase;
   font-style: italic;
   text-shadow: 0.1rem -0.1rem 0.5rem #000;
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 800px) {
+  .section7 .explore, .section7 .world {font-size: 3rem;
+    -webkit-text-stroke: 0.3px #ffffff;}
+  .section7 {height: 45rem}  
 }
 
 .section8 {
@@ -476,6 +538,17 @@ color: #ffffff;
   font-weight: bold;
   text-align: center;
   font-size: 1.75rem;
+}
+
+@media screen and (max-width: 800px) {
+.section8 .three {
+  flex-direction: column;
+}  
+.section8 .quote {width: 15rem;
+font-size: 1.5rem;}
+.section8 .under-quote {
+  font-size: 1.15rem;
+}
 }
 
 .section9 {
@@ -536,6 +609,19 @@ color: #ffffff;
   color: #ffffff;
 }
 
+@media screen and (max-width: 800px) {
+ .section9 {background-size: 100% 10%;}
+ .section9 .title {font-size: 2.5rem;}
+ .section9 .under-title {font-size: 1.15rem;
+width: 15rem}
+ .section9 .email-input {width: 20rem;
+height: 2.5rem;}
+ .section9 .email-button {width: 5rem;
+height: 2.5rem;
+font-size: 0.5rem;}
+
+}
+
 .footer {
   display: flex;
   flex-direction: row;
@@ -568,4 +654,13 @@ color: #ffffff;
 .footer .foot {
   color: #ffffff;
   font-size: 1.25;
+}
+
+@media screen and (max-width: 800px) {
+  .footer {background-size: 100% 5%;
+    flex-direction: column;
+    padding-top: 10rem;
+  }
+    .footer .column1 {width: 20rem}
+  .footer .foot1 {width: 20rem}
 }
